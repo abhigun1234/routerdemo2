@@ -6,7 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import {HomeComponent} from './home/home.component'
 import {RouterModule} from '@angular/router';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { EmplistComponent } from './emplist/emplist.component';
+import { EmpdetailsComponent } from './empdetails/empdetails.component'
 
 @NgModule({
   declarations: [
@@ -14,12 +16,17 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
     LoginComponent,
     AboutComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    EmplistComponent,
+    EmpdetailsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([{ path :'home',component:HomeComponent}
-  ,{path:'aboutus',component:AboutComponent}
+  ,{path:'aboutus',component:AboutComponent,
+},{path:'empdetails',component:EmpdetailsComponent,
+},{path:'emplist',component:EmplistComponent,
+}
  
   , {path:'',component:HomeComponent},
   {path:'**',component:PagenotfoundComponent}
